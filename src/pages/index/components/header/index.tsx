@@ -1,6 +1,7 @@
 import { Text, View } from '@tarojs/components';
 import { AtAvatar, AtIcon } from 'taro-ui';
 import { useState } from 'react';
+import { formatCount } from '@/utils/index';
 
 interface HeaderProps {
   income?: string | number;
@@ -10,23 +11,11 @@ interface HeaderProps {
 
 export const Header = ({income, holdPercentage, holdAmount}: HeaderProps) => {
   const [isShowTotal, setIsShowTotal] = useState(true);
-
-  const formatCount = ({value = null, sign = true}: {
-    value?: string | number | null,
-    sign?: boolean
-  }) => {
-    if (value === null || value === undefined) return '-';
-    const v = Number(value);
-    if (sign) {
-      return v >= 0 ? `+${v.toFixed(2)}` : `-${v.toFixed(2)}`;
-    }
-    return v >= 0 ? `${v.toFixed(2)}` : `${v.toFixed(2)}`;
-  };
-
   const handleShowTotal = () => {
     setIsShowTotal(!isShowTotal);
   };
   const holdAmountNum = formatCount({value: holdAmount, sign: false});
+
   return <View className="header at-row">
     <View className="at-col at-col-1 at-col--auto">
       <AtAvatar
@@ -49,7 +38,8 @@ export const Header = ({income, holdPercentage, holdAmount}: HeaderProps) => {
       <View className="hold-wrapper">
         {isShowTotal ? <>
           {
-            holdAmountNum !== '-' && <Text className="hold-percentage">{formatCount({value: holdPercentage})}%</Text>
+            holdAmountNum !== '-' &&
+            <Text className="hold-percentage">{formatCount({value: holdPercentage, ratio: true})}</Text>
           }
           <Text className="hold-amount">{holdAmountNum}</Text></> : '****'}
       </View>
