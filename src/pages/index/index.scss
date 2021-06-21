@@ -1,0 +1,47 @@
+.index-page {
+  .header {
+    background: #f84542;
+    padding: 30px 40rpx;
+    box-sizing: border-box;
+    height: 250rpx;
+
+    .avatar {
+      border-radius: 20rpx !important;
+      width: 160rpx !important;
+      height: 160rpx !important;
+    }
+
+    .total {
+      text-align: right;
+      color: #fff;
+
+      .income-text {
+        font-size: 42rpx;
+      }
+
+      .income-desc {
+        font-size: 24rpx;
+        .icon {
+          padding-right: 8rpx;
+        }
+      }
+
+      .hold-wrapper {
+        height: 50rpx;
+
+        .hold-percentage {
+          font-size: 24rpx;
+          margin-right: 8rpx;
+        }
+
+        .hold-amount {
+          font-size: 34px;
+        }
+      }
+
+      .hold-desc {
+        font-size: 24rpx;
+      }
+    }
+  }
+}
