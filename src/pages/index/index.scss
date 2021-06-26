@@ -1,6 +1,11 @@
+@import "@/assets/var.scss";
+
 .index-page {
+  min-height: 100vh;
+  background-color: #f1f1f1;
+
   .header {
-    background: #f84542;
+    background: $color-red;
     padding: 30px 40rpx;
     box-sizing: border-box;
     height: 250rpx;
@@ -21,6 +26,7 @@
 
       .income-desc {
         font-size: 24rpx;
+
         .icon {
           padding-right: 8rpx;
         }
@@ -41,6 +47,40 @@
 
       .hold-desc {
         font-size: 24rpx;
+      }
+    }
+  }
+
+  .marker {
+    background-color: #fefefe;
+    padding: 20rpx 0;
+
+    .markerItem {
+      text-align: center;
+      color: $color-red;
+
+      &-text {
+        color: #232121;
+        font-size: 24rpx;
+        padding-bottom: 4rpx;
+      }
+
+      &-total {
+        font-size: 24rpx;
+      }
+
+      &-change {
+        font-size: 24rpx;
+
+        :first-child {
+          text-align: right;
+          padding: 0 8rpx;
+        }
+
+        :last-child {
+          text-align: left;
+          padding: 0 8rpx;
+        }
       }
     }
   }

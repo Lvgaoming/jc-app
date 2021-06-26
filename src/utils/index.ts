@@ -12,8 +12,8 @@ export const formatCount = ({value = null, sign = true, ratio = false, fixed = 2
   fixed?: number,
 }) => {
   if (value === null || value === undefined) return '-';
-  let vNum = ratio && Number(value) > 0 ? Number(value) / 100 : Number(value);
-  let signStr = sign ? vNum >= 0 ? '+' : '-' : '';
+  let vNum = (ratio && Number(value) !== 0) ? Number(value) / 100 : Number(value);
+  let signStr = (sign && vNum >= 0) ? '+' : '';
   let ratioStr = ratio ? '%' : '';
   return `${signStr}${vNum.toFixed(fixed)}${ratioStr}`;
 };

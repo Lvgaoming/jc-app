@@ -1,6 +1,5 @@
 import { Component } from 'react';
-import './assets/custom-variables.scss';
-import './assets/icon.scss';
+import './assets/index.scss';
 
 class App extends Component {
 
