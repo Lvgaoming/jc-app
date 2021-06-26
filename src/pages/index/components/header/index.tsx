@@ -31,7 +31,7 @@ export const Header = ({income, holdPercentage, holdAmount}: HeaderProps) => {
       <View className="income-desc at-row at-row__justify--end at-row__align--center">
         <AtIcon prefixClass="icon" value={isShowTotal ? 'eye' : 'hide'} size="16"
                 className="icon"
-                color="#Fefefe"
+                color="#fefefe"
                 onClick={handleShowTotal}/>
         实时盈亏估算(元)
       </View>

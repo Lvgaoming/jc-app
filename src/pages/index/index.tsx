@@ -4,6 +4,7 @@ import {
 } from '@tarojs/taro';
 import { Header } from './components/header';
 import { Marker } from './components/marker';
+import { List } from './components/list';
 import './index.scss';
 
 const markerList = [{
@@ -32,6 +33,7 @@ const Index = () => {
     <View className="index-page">
       <Header income={-123} holdAmount={1234} holdPercentage={-10}/>
       <Marker markerList={markerList}/>
+      <List/>
     </View>
   );
 };

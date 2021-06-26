@@ -1,0 +1,31 @@
+.jc-sort-button {
+  line-height: 48rpx;
+
+  .left {
+    padding-right: 8rpx;
+  }
+
+  .triangle {
+    width: 0;
+    height: 0;
+    border-bottom-width: 10rpx;
+    border-top-width: 10rpx;
+    border-left-width: 8rpx;
+    border-right-width: 8rpx;
+    border-style: solid;
+    border-color: transparent transparent #cdcece transparent;
+    margin: 2rpx 0;
+
+    &-bottom {
+      border-color: #cdcece transparent transparent transparent;
+    }
+  }
+
+  .ascent {
+    border-color: transparent transparent #2d2d2c transparent;
+  }
+
+  .decrease {
+    border-color: #2d2d2c transparent transparent transparent;
+  }
+}
